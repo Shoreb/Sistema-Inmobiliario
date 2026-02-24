@@ -15,5 +15,5 @@ db = mysql.connector.connect(
 cursor = db.cursor()
 cursor.execute("SHOW TABLES")
 
-print("Conectado a la base de datos Railway")
+print("conectado a la db")
 print(cursor.fetchall())
