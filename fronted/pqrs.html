@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>PQRS</title>
+<link rel="stylesheet" href="assets/css/styles.css">
+</head>
+<body>
+
+<div class="sidebar">
+    <h2>InmoSystem</h2>
+    <a href="dashboard.html">Dashboard</a>
+    <a href="lotes.html">Lotes</a>
+    <a href="pagos.html">Pagos</a>
+    <a href="pqrs.html">PQRS</a>
+    <a href="#" onclick="logout()">Cerrar Sesión</a>
+</div>
+
+<div class="main">
+
+<h1>Gestión PQRS</h1>
+
+<div class="card">
+    <h3>Enviar Nueva Solicitud</h3>
+
+    <form onsubmit="enviarPQRS(event)">
+        <select id="tipoPQRS" required>
+            <option value="">Seleccione tipo</option>
+            <option>Petición</option>
+            <option>Queja</option>
+            <option>Reclamo</option>
+            <option>Sugerencia</option>
+        </select>
+
+        <textarea id="mensajePQRS" placeholder="Escriba su mensaje..." required></textarea>
+
+        <button type="submit">Enviar Solicitud</button>
+    </form>
+</div>
+
+<div class="card">
+    <h3>Mis Solicitudes</h3>
+
+    <table>
+        <thead>
+            <tr>
+                <th>Fecha</th>
+                <th>Tipo</th>
+                <th>Estado</th>
+            </tr>
+        </thead>
+        <tbody id="tablaPQRS">
+            <tr>
+                <td>05/02/2026</td>
+                <td>Petición</td>
+                <td class="status-disponible">En Proceso</td>
+            </tr>
+            <tr>
+                <td>15/01/2026</td>
+                <td>Queja</td>
+                <td class="status-vendido">Cerrado</td>
+            </tr>
+        </tbody>
+    </table>
+</div>
+
+</div>
+
+<script src="assets/js/app.js"></script>
+<script>
+function enviarPQRS(e){
+    e.preventDefault();
+    showToast("Solicitud enviada correctamente 📩");
+}
+</script>
+
+</body>
+</html>

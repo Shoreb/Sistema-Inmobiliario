@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Lotes</title>
+<link rel="stylesheet" href="assets/css/styles.css">
+</head>
+<body>
+
+<div class="sidebar">
+<h2>InmoSystem</h2>
+<a href="dashboard.html">Dashboard</a>
+<a href="lotes.html">Lotes</a>
+<a href="pagos.html">Pagos</a>
+<a href="pqrs.html">PQRS</a>
+</div>
+
+<div class="main">
+<h1>Lotes Disponibles</h1>
+
+<div class="card">
+<select id="filtroEstado" onchange="filtrarLotes()">
+<option value="">Todos</option>
+<option value="Disponible">Disponible</option>
+<option value="Reservado">Reservado</option>
+<option value="Vendido">Vendido</option>
+</select>
+</div>
+
+<div class="card">
+<table>
+<thead>
+<tr>
+<th>Área</th>
+<th>Ubicación</th>
+<th>Valor</th>
+<th>Estado</th>
+<th>Acción</th>
+</tr>
+</thead>
+<tbody id="tablaLotes"></tbody>
+</table>
+</div>
+
+</div>
+
+<script src="assets/js/app.js"></script>
+<script>cargarLotes();</script>
+</body>
+</html>

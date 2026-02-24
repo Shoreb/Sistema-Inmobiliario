@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Dashboard</title>
+<link rel="stylesheet" href="assets/css/styles.css">
+<script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+</head>
+<body>
+
+<div class="sidebar">
+    <h2>InmoSystem</h2>
+    <a href="dashboard.html">Dashboard</a>
+    <a href="lotes.html">Lotes</a>
+    <a href="pagos.html">Pagos</a>
+    <a href="pqrs.html">PQRS</a>
+    <a href="#" onclick="logout()">Cerrar Sesión</a>
+</div>
+
+<div class="main">
+
+<h1>Panel de Control</h1>
+
+<div class="dashboard-grid">
+    <div class="card stat">
+        <p>Lotes Disponibles</p>
+        <h3>24</h3>
+    </div>
+
+    <div class="card stat">
+        <p>Lotes Vendidos</p>
+        <h3>12</h3>
+    </div>
+
+    <div class="card stat">
+        <p>PQRS Activas</p>
+        <h3>3</h3>
+    </div>
+</div>
+
+<div class="card">
+    <h2>Estado General</h2>
+    <canvas id="ventasChart"></canvas>
+</div>
+
+</div>
+
+<script src="assets/js/app.js"></script>
+<script src="assets/js/dashboard.js"></script>
+
+</body>
+</html>
